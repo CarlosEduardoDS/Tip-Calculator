@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+*{
+    transition: 250ms;
+}
+
+body{
+    background-color: hsl(185, 41%, 84%);
+
+    height: 100vh;
+
+    font-size: 24px;
+    font-family: 'Space Mono';
+    font-weight: 700;
+}
+
+.caixa{
+    background-color: white;
+
+    height: 420px;
+    width: 760px;
+
+    border-radius: 25px;
+
+    padding: 25px;
+}
+
+/* Caixa que recebe os dados INÍCIO */
+
+.caixa-entrada{
+    padding: 20px;
+
+    font-size: 17px;
+    color: hsl(186, 14%, 43%);
+}
+
+.caixa-entrada p{
+    padding: 0;
+    margin: 0;
+}
+
+.caixa-entrada .input-grande{
+    height: 30px;
+    width: 100%;
+
+    border: 0;
+
+    background-color: hsl(189, 41%, 97%);
+
+    text-align: end;
+}
+
+.form-ctrl{
+    position: relative;
+}
+
+.form-ctrl input{
+    margin-top: 10px;
+
+    border-radius: 5px;
+
+    color: hsl(183, 100%, 15%);
+
+    caret-color: hsl(183, 100%, 15%);
+
+    padding-right: 7px;
+}
+
+.form-ctrl input:focus-visible{
+    outline: 2px solid hsl(172, 67%, 45%);
+}
+
+.form-ctrl input:hover{
+    outline: 2px solid hsl(172, 67%, 45%);
+}
+
+.form-ctrl svg{
+    position: absolute;
+    left: 10px;
+    top: 17px;
+}
+
+.gorjeta-opcoes{
+    margin-top: 10px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 12px;
+}
+
+.gorjeta,
+.gorjeta-opcoes
+{
+    width: 100%;
+}
+
+.gorjeta button{
+    border: 0;
+    padding: 0;
+}
+
+.porcentagem, 
+.porcentagem-botao
+{
+    width: 100%;
+    height: 40px;
+
+    border-radius: 5px;
+
+    font-weight: 700;
+    font-size: 19px;
+}
+
+.porcentagem-botao{
+    background-color: #00494d;
+    color: hsl(189, 41%, 97%);
+}
+
+.porcentagem-botao:hover{
+    background-color: hsl(185, 41%, 84%);
+    color: #00494d;
+}
+
+.clicado{
+    background-color: hsl(172, 67%, 45%);
+    color: #00494d;
+}
+
+.porcentagem{
+    border: 0;
+    text-align: end;
+    background-color: hsl(189, 41%, 97%);
+    padding-right: 12px;
+    color: #00494d;
+}
+
+.porcentagem:focus{
+    outline: 2px solid hsl(172, 67%, 45%);
+}
+
+.porcentagem:hover{
+    outline: 2px solid hsl(172, 67%, 45%);
+}
+
+
+/* Caixa que recebe os dados FIM */
+
+
+/* Caixa de resposta INÍCIO */
+
+.caixa-resposta{
+    background-color: hsl(183, 100%, 15%);
+   
+    border-radius: 15px;
+
+    color: hsl(189, 41%, 97%);
+
+    padding: 40px;
+    padding-top: 60px;
+}
+
+.gorjeta-texto{
+    gap: 15px;
+}
+
+.gorjeta-texto h4{
+    font-size: 14px;
+
+    line-height: 25px;
+}
+
+.caixa-resposta .person{
+    font-size: 11px;
+    color: hsl(185, 41%, 84%);
+}
+
+.caixa-resposta button{
+    background-color: hsl(172, 67%, 45%);
+    
+    border: 0;
+    border-radius: 5px;
+
+    height: 50px;
+}
+
+.caixa-resposta button:hover{
+    background-color: hsl(185, 41%, 84%);
+}
+
+.caixa-resposta button:focus{
+    background-color: hsla(185, 41%, 84%, 0.123);
+}
+
+.caixa-resposta button p{
+    margin: 0;
+    padding: 0;
+    color: hsl(183, 100%, 15%);
+
+    font-weight: 700;
+    font-size: 20px;
+
+    letter-spacing: 1.5px;
+}
+
+.valor{
+    color: hsl(172, 67%, 45%);
+    font-size: 30px;
+}
+
+/* Caixa de resposta FIM */
+
+/* Media Query */
+
+@media (max-width:770px){
+    .caixa{
+        flex-direction: column;
+        height: 100vh;
+        width: 405px;
+        
+        padding: 18px;
+    }
+    
+    .caixa-entrada{
+        width: 100%;
+        height: 50%;
+        padding: 0;
+        padding-bottom: 12px;
+    }
+    
+    .caixa-resposta{
+        width: 100%;
+        height: 50%;
+        padding: 15px;
+    }
+
+    .porcentagem, 
+    .porcentagem-botao{
+        width: 100%;
+        height: 30px;
+
+        border-radius: 3px;
+
+        font-size: 16px;
+    }
+
+    
+}
+
+@media (max-width:400px) {
+   .caixa{
+        height: 100vh;
+        width: 300px;
+   } 
+
+   .caixa-entrada{
+        width: 100%;
+        height: 60%;
+
+        padding-bottom: 15px;
+    }
+
+    .caixa-resposta{
+        width: 100%;
+        height: 40%;
+
+        padding: 15px;
+        padding-top: 20px;
+    }
+
+    .gorjeta-texto{
+        gap: 5px;
+    }
+
+    .gorjeta-opcoes{
+        margin-top: 5px;
+    
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+        gap: 6px;
+    }
+
+    .gorjeta-texto h4{
+        font-size: 12px;
+    
+        line-height: 15px;
+    }
+
+    .caixa-resposta .person{
+        font-size: 9px;
+    }
+
+    .caixa-resposta button {
+        height: 35px;
+    }
+
+    .caixa-resposta button p{   
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+    .valor{
+        font-size: 24px;
+    }
+}
